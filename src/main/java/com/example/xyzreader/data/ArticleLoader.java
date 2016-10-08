@@ -42,3 +42,4 @@ public class ArticleLoader extends CursorLoader {
         int BODY = 7;
     }
 }
+
