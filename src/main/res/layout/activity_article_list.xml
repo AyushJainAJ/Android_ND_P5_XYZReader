@@ -3,20 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:paddingTop="@dimen/list_side_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="outsideOverlay" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            android:layout_marginLeft="@dimen/list_toolbar_side_margin"
-            android:layout_marginRight="@dimen/list_toolbar_side_margin"
+
             android:background="?colorPrimary"
             android:theme="@style/Theme.Bacon.AppBarOverlay"
             app:elevation="4dp"
+            app:layout_scrollFlags="enterAlways"
             app:popupTheme="@style/Theme.Bacon.PopupOverlay">
 
             <ImageView
@@ -26,22 +39,6 @@
                 android:src="@drawable/logo" />
 
         </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
 
-        <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/swipe_refresh_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="@dimen/list_side_margin">
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"
-                android:paddingBottom="28dp"
-                android:paddingLeft="@dimen/list_side_margin"
-                android:paddingRight="@dimen/list_side_margin"
-                android:scrollbarStyle="outsideOverlay" />
-        </android.support.v4.widget.SwipeRefreshLayout>
-    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
