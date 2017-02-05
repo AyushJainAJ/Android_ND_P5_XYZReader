@@ -22,6 +22,7 @@
             android:layout_height="144dp"
             android:background="@color/light_gray"
             android:contentDescription="@string/feed_thumbnail"
+            android:transitionName="@string/activity_image_trans"
             android:scaleType="fitCenter" />
 
         <TextView
