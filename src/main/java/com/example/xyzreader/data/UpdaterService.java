@@ -75,6 +75,7 @@ public class UpdaterService extends IntentService {
             getContentResolver().applyBatch(ItemsContract.CONTENT_AUTHORITY, cpo);
 
         } catch (JSONException | RemoteException | OperationApplicationException e) {
+            e.printStackTrace();
         }
 
         sendStickyBroadcast(

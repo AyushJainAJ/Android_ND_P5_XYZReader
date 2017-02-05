@@ -37,6 +37,7 @@ public class RemoteEndpointUtil {
 
             return (JSONArray) val;
         } catch (JSONException e) {
+            e.printStackTrace();
         }
 
         return null;
@@ -63,10 +64,14 @@ public class RemoteEndpointUtil {
 
             return out.toByteArray();
 
-        } finally {
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+        finally {
 
             if (in != null)
                 in.close();
         }
+        return null;
     }
 }
