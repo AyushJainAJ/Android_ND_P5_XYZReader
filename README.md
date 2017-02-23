@@ -1,7 +1,9 @@
-# Android_ND_P5_XYZReader
-An Android project developed for Udacity Android Nanodegree.
+# XYZ Reader
+## Udacity Android Nanodegree program
+### Project 5
 
-This application is a mock RSS feed reader featuring banner photos and shocking headlines.
+
+A mock RSS feed reader Android application featuring banner photos and shocking headlines.
 
 Features of this app:
 
